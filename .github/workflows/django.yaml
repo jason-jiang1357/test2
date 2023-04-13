@@ -26,6 +26,10 @@ jobs:
       - name: install dependencies
         run: ls -l
 
-  # run:
-  #   #   name: exec test..
-  #
+  run:
+    name: exec test..
+    runs-on: ubuntu-latest
+    steps:
+      - name: run1
+        run: pwd
+
