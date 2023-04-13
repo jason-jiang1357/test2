@@ -1,0 +1,31 @@
+name: redk kernel 2.0 CI
+
+on:
+  push:
+    branches:
+      - "main"
+
+  pull_request:
+    branches:
+      - "dev"
+      - "main"
+
+jobs:
+  build:
+    name: build install ..
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: set up python3.11.2
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+
+      - name: install dependencies
+        run: ls -l
+
+  # run:
+  #   #   name: exec test..
+  #
